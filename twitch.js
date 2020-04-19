@@ -3,7 +3,7 @@ var streamersLive = [];
 console.log("I am running");
 
 function searchStreamers() {
-  var streamerList = ["twistedxvs", "mrdolphin", "papadreadhead", "wolfiebosz", "syk_zero"];
+  var streamerList = ["twistedxvs", "mrdolphin", "papadreadhead", "wolfiebosz", "syk_zero", "TPG_Spectre"];
   //"twistedxvs", "mrdolphin", "papadreadhead", "wolfiebosz", "syk_zero"
   for (var i = 0; i < streamerList.length; i++) {
     request(streamerList[i]);
@@ -17,7 +17,7 @@ function request(streamer) {
     url: queryURL,
     type: "GET",
     headers: {
-      "Client-ID": "wbg0ekptj39yhp2g2ffmj5hk4pfnon"
+      "Client-ID": "addyourownID"
     }
   }).then(function (response) {
     console.log(response);
@@ -32,6 +32,7 @@ function isLive(streamerName) {
       layout: "video",
       height: 600,
       width: "100%",
+      setVolume: ".30",
       autoplay: false
     })
   } else {
@@ -41,6 +42,7 @@ function isLive(streamerName) {
       layout: "video",
       height: 600,
       width: "100%",
+      setVolume: ".30",
       autoplay: false
     })
   }
